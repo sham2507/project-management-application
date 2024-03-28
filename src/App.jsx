@@ -89,12 +89,13 @@ function App() {
         ...prevState,
         selectedProjectId: undefined,
         projects: prevState.projects.filter((project) =>{
-          project.id !== prevState.selectedProjectId;
+          project.id !== prevState.selectedProjectId
         })
       };
     });
   }
 
+  console.log(projectsState);
   
   let selectedProject = projectsState.projects.find(project=> project.id === projectsState.selectedProjectId);
   let content = <SelectedProject 
